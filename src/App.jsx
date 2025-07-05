@@ -1,12 +1,16 @@
 import React from 'react';
 import Header from './component/header/Header';
-import Blogs from './component/Blogs/Blogs';
+import Blogs from './component/blogs/Blogs';
+import Bookmarks from './component/bookmark/Bookmarks';
 
 const App = () => {
   return (
     <>
       <Header></Header>
-      <Blogs></Blogs>
+      <main className='flex mx-5'>
+        <Blogs></Blogs>
+        <Bookmarks></Bookmarks>
+      </main>
     </>
   );
 };
