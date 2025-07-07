@@ -1,11 +1,11 @@
+import { IoBookmarks } from "react-icons/io5";
 
-
-const Blog = ({ blog }) => {
-    const { cover, author_name, author_img, post_date, reading_time } = blog;
+const Blog = ({ blog, handleBookmarkClick }) => {
+    const { cover, author_name, author_img, post_date, reading_time, title, hashtag } = blog;
     return (
-        <div>
+        <div className="mb-10">
             <div>
-                <img src={cover} alt="" />
+                <img className="mb-8 w-full rounded-3xl" src={cover} alt="" />
             </div>
             <div className="flex items-center justify-between">
                 <div className="flex items-center">
@@ -17,10 +17,15 @@ const Blog = ({ blog }) => {
                         <h5>{post_date}</h5>
                     </div>
                 </div>
-                <div>
+                <div className="flex items-center">
                     <span>{reading_time} min read</span>
+                    <button onClick={handleBookmarkClick} className="text-2xl ml-2">  <IoBookmarks></IoBookmarks></button>
                 </div>
             </div>
+            <h1 className="text-5xl font-bold mt-4">{title}</h1>
+            <a className="mt-4" href='#'>{hashtag}</a>
+            <br />
+            <a className="mt-4" href='#'>Mark as Read</a>
         </div>
     );
 

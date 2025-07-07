@@ -2,7 +2,7 @@ import profilePhoto from "../../img/profile Picture.png"
 
 const Header = () => {
     return (
-        <div className="flex justify-between items-center p-4 mx-4 border-b-2">
+        <div className="flex justify-between items-center p-4 mx-auto border-b-2 max-w-6xl">
             <h1 class="text-3xl">
                 Knowledge Book
             </h1>
