@@ -19,7 +19,7 @@ const Blog = ({ blog, handleBookmarkClick }) => {
                 </div>
                 <div className="flex items-center">
                     <span>{reading_time} min read</span>
-                    <button onClick={handleBookmarkClick} className="text-2xl ml-2">  <IoBookmarks></IoBookmarks></button>
+                    <button onClick={()=>handleBookmarkClick(blog)} className="text-2xl ml-2">  <IoBookmarks></IoBookmarks></button>
                 </div>
             </div>
             <h1 className="text-5xl font-bold mt-4">{title}</h1>

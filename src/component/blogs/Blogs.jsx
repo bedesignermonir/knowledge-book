@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Blog from '../blog/Blog'
+import Blog from '../blog/Blog';
 
 
 const Blogs = ({ handleBookmarkClick }) => {
@@ -13,7 +13,7 @@ const Blogs = ({ handleBookmarkClick }) => {
     return (
         <div className="md:w-2/3">
             {
-                blogs.map(blog => <Blog handleBookmarkClick={handleBookmarkClick} blog={blog}></Blog>)
+                blogs.map(blog => <Blog key={blog.id} handleBookmarkClick={handleBookmarkClick} blog={blog}></Blog>)
             }
         </div>
     );
