@@ -1,7 +1,7 @@
 import { IoBookmarks } from "react-icons/io5";
 
-const Blog = ({ blog, handleBookmarkClick }) => {
-    const { cover, author_name, author_img, post_date, reading_time, title, hashtag } = blog;
+const Blog = ({ blog, handleBookmarkClick, handleMarkRead }) => {
+    const { cover, author_name, author_img, post_date, reading_time, title, hashtag, id } = blog;
     return (
         <div className="mb-10">
             <div>
@@ -25,7 +25,7 @@ const Blog = ({ blog, handleBookmarkClick }) => {
             <h1 className="text-5xl font-bold mt-4">{title}</h1>
             <a className="mt-4" href='#'>{hashtag}</a>
             <br />
-            <a className="mt-4" href='#'>Mark as Read</a>
+           <button onClick={() =>handleMarkRead(reading_time, id)} className="underline font-bold text-blue-600">Mark as Read</button>
         </div>
     );
 
